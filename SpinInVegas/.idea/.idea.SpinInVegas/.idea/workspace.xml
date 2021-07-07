@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/863BA73F-21F3-4AF5-9D08-E207ECC8EC72/d9/9a8e10ea/InterstitialAd.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mechanics/Delete.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -20,8 +21,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Mechanics/Delete.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mechanics/Arrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AdMob/AdmobScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Mechanics/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AdMob/AdmobScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uxAvJIijbR55IWovS4C3BFFWWW" />
@@ -67,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625597096320</updated>
-      <workItem from="1625597099668" duration="11659000" />
+      <workItem from="1625597099668" duration="12418000" />
     </task>
     <servers />
   </component>

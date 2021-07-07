@@ -9,7 +9,6 @@ namespace Mechanics
         {
             if (other.CompareTag("Number") && SceneManager.GetActiveScene().buildIndex == 1)
             {
-                Debug.Log($"n: {GameManager.CurrentNumber}");
                 TextMesh mesh = other.GetComponent<TextMesh>();
                 GameManager.Numbers[GameManager.CurrentNumber] = int.Parse(mesh.text);
             }

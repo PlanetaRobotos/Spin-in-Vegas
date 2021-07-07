@@ -8,12 +8,12 @@ public class AdmobScript : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.OnStartAd += RequestInterstitial;
+        GameManager.OnStartAd += showInterstitialAd;
     }
 
     private void OnDisable()
     {
-        GameManager.OnStartAd -= RequestInterstitial;
+        GameManager.OnStartAd -= showInterstitialAd;
     }
 
     // Use this for initialization
@@ -62,8 +62,6 @@ public class AdmobScript : MonoBehaviour
 #else
 			string adUnitId = "unexpected_platform";
 #endif
-        Debug.Log($"here");
-
         // Initialize an InterstitialAd.
         interstitial = new InterstitialAd(adUnitId);
         // Create an empty ad request.

@@ -2545,7 +2545,7 @@ MonoBehaviour:
   loseClip: {fileID: 8300000, guid: a3ec6e15df4d1654a8433c49406eaa14, type: 3}
   spinClip: {fileID: 8300000, guid: 7b503abfd1980cc4086ee0222183d47b, type: 3}
   coinMinusClip: {fileID: 8300000, guid: e1a31f45bf6276f4890bc7f22e7f5a37, type: 3}
-  adDelay: 2
+  adDelay: 9
 --- !u!4 &1268484798
 Transform:
   m_ObjectHideFlags: 0
