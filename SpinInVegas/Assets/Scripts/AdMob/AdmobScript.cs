@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class AdmobScript : MonoBehaviour
 {
-	InterstitialAd interstitial;
+    InterstitialAd interstitial;
 
-	private void OnEnable()
-	{
-		GameManager.OnStartAd += RequestInterstitial;
-	}
+    private void OnEnable()
+    {
+        GameManager.OnStartAd += RequestInterstitial;
+    }
 
-	private void OnDisable()
-	{
-		GameManager.OnStartAd -= RequestInterstitial;
-	}
+    private void OnDisable()
+    {
+        GameManager.OnStartAd -= RequestInterstitial;
+    }
 
-	// Use this for initialization
+    // Use this for initialization
     void Start()
     {
         //Request Ads
         // RequestBanner();
-		RequestInterstitial();
+        RequestInterstitial();
     }
 
     public void showInterstitialAd()
@@ -31,45 +31,44 @@ public class AdmobScript : MonoBehaviour
         {
             interstitial.Show();
         }
-
     }
 
-   private void RequestBanner()
-	{
-		#if UNITY_EDITOR
-			string adUnitId = "unused";
-		#elif UNITY_ANDROID
+    private void RequestBanner()
+    {
+#if UNITY_EDITOR
+        string adUnitId = "unused";
+#elif UNITY_ANDROID
 			string adUnitId = "ca-app-pub-4697579006360442/5518347117";
-		#elif UNITY_IPHONE
+#elif UNITY_IPHONE
 			string adUnitId = "INSERT_IOS_BANNER_AD_UNIT_ID_HERE";
-		#else
+#else
 			string adUnitId = "unexpected_platform";
-		#endif
+#endif
 
-		// Create a 320x50 banner at the bottom of the screen.
-		BannerView bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Bottom);
-		// Create an empty ad request.
-		AdRequest request = new AdRequest.Builder().Build();
-		// Load the banner with the request.
-		bannerView.LoadAd(request);
-	}
-	
-	private void RequestInterstitial()
-	{
-		#if UNITY_ANDROID
-			string adUnitId = "ca-app-pub-4697579006360442/1613571751";
-		#elif UNITY_IPHONE
+        // Create a 320x50 banner at the bottom of the screen.
+        BannerView bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Bottom);
+        // Create an empty ad request.
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the banner with the request.
+        bannerView.LoadAd(request);
+    }
+
+    private void RequestInterstitial()
+    {
+#if UNITY_ANDROID
+        string adUnitId = "ca-app-pub-4697579006360442/1613571751";
+#elif UNITY_IPHONE
 			string adUnitId = "INSERT_IOS_INTERSTITIAL_AD_UNIT_ID_HERE";
-		#else
+#else
 			string adUnitId = "unexpected_platform";
-		#endif
+#endif
+        Debug.Log($"here");
 
-		// Initialize an InterstitialAd.
-		interstitial = new InterstitialAd(adUnitId);
-		// Create an empty ad request.
-		AdRequest request = new AdRequest.Builder().Build();
-		// Load the interstitial with the request.
-		interstitial.LoadAd(request);
-	}
-
+        // Initialize an InterstitialAd.
+        interstitial = new InterstitialAd(adUnitId);
+        // Create an empty ad request.
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the interstitial with the request.
+        interstitial.LoadAd(request);
+    }
 }

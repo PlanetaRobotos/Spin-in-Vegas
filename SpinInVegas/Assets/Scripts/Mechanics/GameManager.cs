@@ -224,7 +224,6 @@ public class GameManager : MonoBehaviour
         if (_counter % adDelay == 0 && _buildIndex == 1)
         {
             yield return new WaitForSeconds(0.5f);
-            Debug.Log($"here");
             OnStartAd?.Invoke();
         }
     }
